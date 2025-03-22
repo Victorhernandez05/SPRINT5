@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Projecte FOG VICTOR</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SPRINT 2";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Projecte FOG VICTOR
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">SPRINT 2</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#afegir-usuaris">Afegir usuaris</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-adduser">Comanda adduser</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-useradd">Comanda useradd</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#eliminar-usuaris">Eliminar usuaris</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-deluser">Comanda deluser</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-userdel">Comanda userdel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creacio-i-configuracio-de-grups">Creació i configuració de grups</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuracio-de-politiques-de-contrasenyes">Configuració de polítiques de contrasenyes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#llistes-de-control-dacces">Llistes de control d'accés</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mascara-de-permisos-umask">Màscara de permisos umask</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#per-a-que-serveix-umask">Per a què serveix umask</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#canvi-temporal-a-un-altre-usuari">Canvi temporal a un altre usuari</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#canvi-definitiu-del-umask">Canvi definitiu del umask</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#que-es-un-proces">Què és un procés?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-top">Comanda top</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-pstree">Comanda pstree</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-ps-aux">Comanda ps aux</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-jobs">Comanda jobs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-fg">Comanda fg</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comanda-kill">Comanda kill</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="about/">.</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Projecte FOG VICTOR</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">SPRINT 2</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sprint-2">SPRINT 2</h1>
+<p><strong>Sistema Opertatiu Ubuntu</strong></p>
+<h3 id="afegir-usuaris">Afegir usuaris</h3>
+<p>Per afegir un usuari al sistema, es poden utilitzar dues comandes: <strong>adduser i useradd</strong>. La diferència principal és que adduser és una versió més amigable i interactiva de useradd, que generalment és més bàsica i directa.</p>
+<h5 id="comanda-adduser"><strong>Comanda adduser</strong></h5>
+<p>La comanda adduser és una versió més avançada i automàtica per crear usuaris. Aquesta comanda crea l'usuari, el seu directori personal i altres fitxers de configuració necessaris.
+Exemple per crear un usuari anomenat josep:</p>
+<p><code>sudo adduser josep</code></p>
+<p><img alt="imagen" src="img/Imatge%20enganxada.png" /></p>
+<h5 id="comanda-useradd"><strong>Comanda useradd</strong></h5>
+<p>La comanda useradd és més simple i requereix més configuració manual. Aquesta comanda només crea l'usuari, però no crea un directori personal ni altres fitxers. </p>
+<p><code>sudo useradd -m -s /bin/bash josep</code>
+<img alt="imagen" src="img/Imatge%20enganxada%20%283%29.png" /></p>
+<p><strong>L'opció -m crea el directori personal de l'usuari.</strong> </p>
+<p><strong>L'opció -s especifica la shell (per exemple, /bin/bash).</strong></p>
+<p>Comprovació quan es creen els usuaris</p>
+<ul>
+<li>Directori personal: /home/josep</li>
+<li>Grup d'usuari: el grup josep</li>
+<li>Arxius de configuració: .bashrc, .profile, etc.</li>
+</ul>
+<h3 id="eliminar-usuaris">Eliminar usuaris</h3>
+<p>Per eliminar un usuari, es poden utilitzar les comandes deluser o userdel. </p>
+<h5 id="comanda-deluser"><strong>Comanda deluser</strong></h5>
+<p>Per eliminar un usuari amb deluser, utilitza: <code>sudo deluser josep</code></p>
+<p><img alt="imagen" src="img/Imatge%20enganxada%20%282%29.png" /></p>
+<p>Aquesta comanda elimina l'usuari del sistema, però no elimina el seu directori personal. 
+Si vols eliminar també el directori personal, utilitza: </p>
+<p><code>sudo deluser --remove-home josep</code></p>
+<p><img alt="imagen" src="img/Imatge%20enganxada%20%284%29.png" /></p>
+<h5 id="comanda-userdel">Comanda userdel</h5>
+<p>Per eliminar un usuari amb userdel: sudo userdel josep
+Si vols eliminar també el directori personal, pots afegir l'opció -r: sudo userdel -r josep</p>
+<p>Personalització de les comandes adduser i useradd
+Personalització de useradd
+La comanda useradd es pot personalitzar editant el fitxer de configuració /etc/default/useradd. Algunes de les opcions que es poden modificar inclouen:</p>
+<ul>
+<li>HOME: Configura el directori personal per defecte.</li>
+<li>SHELL: Configura la shell per defecte per als usuaris nous.</li>
+<li>GROUP: Configura si els usuaris seran creats amb un grup separat o assignats a un grup preexistent.</li>
+</ul>
+<h3 id="creacio-i-configuracio-de-grups">Creació i configuració de grups</h3>
+<p>Crear un grup nou:</p>
+<p><code>sudo groupadd nom_grup</code></p>
+<p><img alt="imagen" src="img/Imatge%20enganxada%20%285%29.png" /></p>
+<p>Afegir un usuari existent a un grup:</p>
+<p><code>sudo usermod -aG nom_grup usuari_nom</code></p>
+<p><img alt="alt text" src="image.png" />
+<img alt="alt text" src="image-1.png" /></p>
+<p>Eliminar un grup:</p>
+<p><code>sudo groupdel nom_grup</code></p>
+<p><img alt="alt text" src="image-2.png" /></p>
+<h3 id="configuracio-de-politiques-de-contrasenyes">Configuració de polítiques de contrasenyes</h3>
+<p><code>sudo nano /etc/login.defs</code></p>
+<p><img alt="alt text" src="image-3.png" /></p>
+<pre><code> PASS_MAX_DAYS: Màxim de dies per canviar la contrasenya.
+ PASS_MIN_DAYS: Mínim de dies abans de poder canviar la contrasenya.
+ PASS_MIN_LEN: Longitud mínima de la contrasenya.
+ PASS_WARN_AGE: Dies d'advertència abans de la caducitat.
+</code></pre>
+<h3 id="llistes-de-control-dacces">Llistes de control d'accés</h3>
+<p>Les llistes de control d'accés (ACL) permeten especificar permisos addicionals per a usuaris o grups sobre fitxers i directoris</p>
+<p><strong>Afegeix permisos d'escriptura a un usuari concret</strong></p>
+<p><code>setfacl -m u:usuari:w fitxer.txt</code></p>
+<p><strong>Afegeix permisos de lectura a un grup</strong></p>
+<p><code>setfacl -m g:grup:r fitxer.txt</code></p>
+<p><strong>Elimina permisos d'un usuari concret</strong></p>
+<p><code>setfacl -x u:usuari fitxer.txt</code></p>
+<p><strong>Visualitzar ACL existents</strong></p>
+<p><code>getfacl fitxer.txt</code></p>
+<p><strong>Casos d'ús habituals</strong></p>
+<ul>
+<li>Donar accés addicional a usuaris sense canviar el propietari ni el grup del fitxer.</li>
+<li>Configurar permisos predeterminats per als nous fitxers dins d'un directori compartit.</li>
+<li>Gestionar accés granular en entorns multiusuari.</li>
+</ul>
+<h3 id="mascara-de-permisos-umask">Màscara de permisos umask</h3>
+<p><strong>La màscara de permisos umask utilitza tres dígits octals, cada un dels quals representa els permisos per a l'usuari, el grup i altres usuaris, respectivament. Els tres dígits són valors entre 0 i 7, que es poden desglossar així:</strong></p>
+<ul>
+<li>0: Permís complet (lectura, escriptura i execució).</li>
+<li>1: Permís només d'execució.</li>
+<li>2: Permís només d'escriptura.</li>
+<li>3: Permís d'escriptura i execució.</li>
+<li>4: Permís només de lectura.</li>
+<li>5: Permís de lectura i execució.</li>
+<li>6: Permís de lectura i escriptura.</li>
+<li>7: Sense permisos (el màxim bloqueig).</li>
+</ul>
+<h4 id="per-a-que-serveix-umask">Per a què serveix umask</h4>
+<p><strong>La umask defineix quins permisos no es concediran de manera predeterminada quan es creen nous fitxers o directoris. Funciona invertint els bits dels permisos. Per exemple, si la umask està configurada a 022:</strong></p>
+<ul>
+<li>Permisos per defecte:</li>
+</ul>
+<p>Fitxers: 666 (lectura i escriptura per a tots)
+Directoris: 777 (lectura, escriptura i execució per a tots)</p>
+<ul>
+<li>Resultat aplicant la umask:</li>
+</ul>
+<p>Amb umask 022, els permisos restants seran 644 per a fitxers (rw-r--r--) i 755 per a directoris (rwxr-xr-x).</p>
+<h4 id="canvi-temporal-a-un-altre-usuari">Canvi temporal a un altre usuari</h4>
+<p><strong>Per canviar temporalment a un altre usuari en un terminal, es fa servir la comanda su.</strong></p>
+<p><code>`su - nom_usuari</code></p>
+<h4 id="canvi-definitiu-del-umask">Canvi definitiu del umask</h4>
+<p>Perquè el canvi sigui permanent, cal editar els fitxers de configuració de l'usuari:</p>
+<p><strong>Editar .bashrc</strong></p>
+<p>umask 027</p>
+<p>Aplica els canvis Guarda el fitxer i carrega els canvis amb:</p>
+<p>source ~/.bashrc</p>
+<h3 id="que-es-un-proces">Què és un procés?</h3>
+<p>Un procés és un programa en execució al sistema operatiu. Es tracta d’una instància d’un programa que inclou el codi executable, l’estat, les dades, les variables, i altres recursos necessaris per a la seva execució (memòria, descriptors de fitxers, etc.). </p>
+<p>Els processos poden ser:</p>
+<ul>
+<li>Actius (Running): En execució o en espera de recursos.</li>
+<li>Bloquejats (Blocked): Esperant una acció externa.</li>
+<li>Suspesos o Zombies: Processos parats o finalitzats, però que encara ocupen recursos del sistema.</li>
+</ul>
+<h4 id="comanda-top">Comanda top</h4>
+<p><strong><code>top</code> mostra en temps real una llista dels processos actius al sistema amb informació sobre el consum de recursos, com la CPU i la memòria.</strong></p>
+<p><strong>Principals camps:</strong></p>
+<pre><code>PID: Identificador del procés.
+USER: Usuari que executa el procés.
+%CPU: Percentatge d’ús de CPU.
+%MEM: Percentatge d’ús de memòria.
+TIME+: Temps total de CPU utilitzat pel procés.
+COMMAND: Nom de l’executable o comanda.
+</code></pre>
+<h4 id="comanda-pstree">Comanda pstree</h4>
+<p><strong><code>pstree</code> mostra els processos en un format d’arbre jeràrquic, il·lustrant com estan relacionats els processos entre si (processos pares i fills).</strong></p>
+<p><strong>Paràmetres útils:</strong></p>
+<ul>
+<li>-p: Mostra els PIDs al costat de cada procés.</li>
+</ul>
+<p><code>pstree -p</code></p>
+<ul>
+<li>-u: Mostra els noms dels usuaris associats als processos.</li>
+</ul>
+<p><code>pstree -u</code></p>
+<ul>
+<li>-a: Mostra els arguments de les comandes dels processos.</li>
+</ul>
+<p><code>pstree -a</code></p>
+<h4 id="comanda-ps-aux">Comanda ps aux</h4>
+<p>Mostra una llista dels processos actius al sistema amb informació detallada.</p>
+<p><code>ps aux</code></p>
+<ul>
+<li>a: Mostra tots els processos d'usuaris.</li>
+<li>u: Inclou informació detallada com usuari, consum de CPU i memòria.</li>
+<li>x: Mostra processos que no estan associats a cap terminal.</li>
+</ul>
+<h4 id="comanda-jobs">Comanda jobs</h4>
+<p>Mostra la llista dels processos que s’executen en segon pla (background) o que estan suspesos a la sessió actual.</p>
+<p>Resultat habitual:</p>
+<p><code>[1]+  Stopped  ./script.sh</code></p>
+<h4 id="comanda-fg">Comanda fg</h4>
+<p>Per reprendre un procés suspès o que s'executa en segon pla.</p>
+<p><code>fg %1</code></p>
+<h4 id="comanda-kill">Comanda kill</h4>
+<p>S'utilitza per enviar senyals als processos per gestionar-los.</p>
+<p><code>kill -9 PID</code></p>
+<ul>
+<li>
+<p>-9: Envia el senyal SIGKILL, que força la terminació immediata del procés.</p>
+</li>
+<li>
+<p>PID: Identificador del procés a finalitzar (obtingut amb ps aux o top).</p>
+</li>
+</ul>
+<p>Si tens un procés amb PID 1234 que vols matar:</p>
+<p><code>kill -9 1234</code></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="about/" class="btn btn-neutral float-right" title=".">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2024-12-05 10:53:18.217602+00:00
+-->
