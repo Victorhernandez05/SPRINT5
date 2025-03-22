@@ -11,7 +11,7 @@ Els logs es guarden principalment a la carpeta `/var/log`, on cada servei té el
 
 Per definir una rotació específica d’un log, cal accedir al directori `/etc/logrotate.d/`, on es poden crear o modificar regles personalitzades per a cada servei o aplicació.
 
-![imagen](img/Imatge enganxada (150).png)
+![imagen](<img/Imatge enganxada (150).png>)
 
 ### Analització de logs
 
