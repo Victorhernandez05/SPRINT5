@@ -7,6 +7,7 @@ Els logs són registres que recullen informació sobre les activitats d’un sis
 ### Rotació i Gestió dels Logs
 
 Els logs es guarden principalment a la carpeta `/var/log`, on cada servei té el seu propi fitxer. Són clau per controlar el sistema, detectar errors i possibles amenaces. A més, segueixen una política de rotació per evitar que ocupin massa espai, mantenint un historial dels registres antics.
+
 ![imagen](<img/Imatge enganxada (149).png>)
 
 Per definir una rotació específica d’un log, cal accedir al directori `/etc/logrotate.d/`, on es poden crear o modificar regles personalitzades per a cada servei o aplicació.
