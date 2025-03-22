@@ -7,7 +7,7 @@ Els logs són registres que recullen informació sobre les activitats d’un sis
 ### Rotació i Gestió dels Logs
 
 Els logs es guarden principalment a la carpeta `/var/log`, on cada servei té el seu propi fitxer. Són clau per controlar el sistema, detectar errors i possibles amenaces. A més, segueixen una política de rotació per evitar que ocupin massa espai, mantenint un historial dels registres antics.
-![imagen](img/Imatge enganxada (149).png)
+![imagen](<img/Imatge enganxada (149).png>)
 
 Per definir una rotació específica d’un log, cal accedir al directori `/etc/logrotate.d/`, on es poden crear o modificar regles personalitzades per a cada servei o aplicació.
 
@@ -19,19 +19,19 @@ Els logs es poden analitzar amb comandes com cat, però una eina més avançada 
 
 `journalctl --since "11:00" --until "12:00"`
 
-![imagen](img/Imatge enganxada (153).png)
+![imagen](<img/Imatge enganxada (153).png>)
 
 Per visualitzar els logs vinculats a un dispositiu concret, com per exemple un disc, es pot fer servir la comanda:
 `journalctl /dev/sda`
 
-![imagen](img/Imatge enganxada (154).png)
+![imagen](<img/Imatge enganxada (154).png>)
 
 
 ### Logs personalitzats
 
 Els logs personalitzats permeten adaptar el comportament dels registres del sistema segons les necessitats. Es poden modificar filtres, destinacions i alertes editant fitxers com `/etc/rsyslog.d/50-default.conf`.
 
-![imagen](img/Imatge enganxada (155).png)
+![imagen](<img/Imatge enganxada (155).png>)
 
 - S'envien missatges amb logger usant la prioritat mail.alert.
 
@@ -39,14 +39,14 @@ Els logs personalitzats permeten adaptar el comportament dels registres del sist
 
 - S'observen els missatges "Alerta de mail!clear!" i "Alerta de error" dins dels fitxers corresponents.
 
-![imagen](img/Imatge enganxada (151).png)
+![imagen](<img/Imatge enganxada (151).png>)
 
 
 - Es creen missatges amb logger usant diferents prioritats: auth.crit i cron.crit.
 
 - Els missatges són "prova victor" i es mostren per pantalla amb l'opció -s.
 
-![imagen](img/Imatge enganxada (152).png)
+![imagen](<img/Imatge enganxada (152).png>)
 
 
 ### Servidor d'Actualitzacions 
@@ -84,14 +84,14 @@ Després, s’instal·la el servidor web Apache2, que servirà els paquets als c
 
 `sudo apt install apache2`
 
-![imagen](img/Imatge enganxada (156).png)
+![imagen](<img/Imatge enganxada (156).png>)
 
 Tot seguit, s’instal·la el paquet apt-mirror, una eina que permet crear una còpia local dels repositoris APT, evitant així la necessitat d’accedir a Internet per descarregar paquets:
 
 `sudo apt install apt-mirror`
 
 
-![imagen](img/Imatge enganxada (157).png)
+![imagen](<img/Imatge enganxada (157).png>)
 
 Un cop instal·lat, cal editar el fitxer de configuració:
 
@@ -99,19 +99,19 @@ Un cop instal·lat, cal editar el fitxer de configuració:
 
 En aquest fitxer es desactiven (comentant-les) les línies predeterminades i s’afegeixen les línies necessàries per especificar quins repositoris es volen sincronitzar localment.
 
-![imagen](img/Imatge enganxada (158).png)
+![imagen](<img/Imatge enganxada (158).png>)
 
 Un cop configurat el fitxer mirror.list, s’executa la comanda següent amb permisos d’administrador per iniciar la descàrrega dels paquets:
 
 `sudo apt-mirror`
 
-![imagen](img/Imatge enganxada (159).png)
+![imagen](<img/Imatge enganxada (159).png>)
 
-![imagen](img/Imatge enganxada (160).png)
+![imagen](<img/Imatge enganxada (160).png>)
 
 Per fer que aquests paquets siguin accessibles als clients mitjançant el servidor web Apache2, es crea un enllaç simbòlic cap al directori de descàrrega (per exemple, un repositori de Google) dins de /var/www/html:
 
-![imagen](img/Imatge enganxada (161).png)
+![imagen](<img/Imatge enganxada (161).png>)
 
 ### Configuració dels Clients
 
@@ -119,10 +119,10 @@ S’afegeix la clau de signatura pública de Google, que permet verificar l'aute
 
 `wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -`
 
-![imagen](img/Imatge enganxada (162).png)
+![imagen](<img/Imatge enganxada (162).png>)
 
 
-![imagen](img/Imatge enganxada (163).png)
+![imagen](<img/Imatge enganxada (163).png>)
 
 Aquesta línia afegeix un repositori personalitzat per a descarregar Google Chrome, però redireccionat a través del servidor d’actualitzacions local amb IP 10.0.2.9. Això vol dir que el client ja no es connecta directament a Google, sinó que descarrega els paquets des del servidor local, on s’ha fet un mirall (mirror) d’aquest repositori.
 
@@ -137,17 +137,17 @@ Utilitza la comanda següent per instal·lar el programari:
 
 `sudo apt install lynis -ysudo apt install lynis -`
 
-![imagen](img/Imatge enganxada (164).png)
+![imagen](<img/Imatge enganxada (164).png>)
 
 Executa:
 
 `sudo lynis audit system`
 
-![imagen](img/Imatge enganxada (165).png)
+![imagen](<img/Imatge enganxada (165).png>)
 
 A la part inferior del resultat, es mostra l'índex de seguretat; aquest valor augmenta a mesura que es resolen problemes i es millora la configuració del sistema.
 
-![imagen](img/Imatge enganxada (166).png)
+![imagen](<img/Imatge enganxada (166).png>)
 
 
 Escaneig Ràpid:
@@ -156,11 +156,11 @@ Per fer un escaneig ràpid, utilitza la comanda:
 
 `lyins -Q`
 
-![imagen](img/Imatge enganxada (167).png)
+![imagen](<img/Imatge enganxada (167).png>)
 
 Això et permetrà saber quins aspectes del sistema cal millorar o completar.
 
-![imagen](img/Imatge enganxada (168).png)
+![imagen](<img/Imatge enganxada (168).png>)
 
 ### Paquets Necessaris
 
@@ -168,7 +168,7 @@ Per solucionar la manca de paquets, primer actualitza la llista de repositoris i
 
 `sudo apt update && sudo apt install -y apt-listchanges needrestart fail2ban`
 
-![imagen](img/Imatge enganxada (169).png)
+![imagen](<img/Imatge enganxada (169).png>)
 
 
  Contingut dels paquets:
@@ -179,7 +179,7 @@ Per solucionar la manca de paquets, primer actualitza la llista de repositoris i
 
 `sudo apt install cryptsetup cryptsetup-bin`
 
-![imagen](img/Imatge enganxada (170).png)
+![imagen](<img/Imatge enganxada (170).png>)
 
  Contingut dels paquets:
 
@@ -189,20 +189,20 @@ Per solucionar la manca de paquets, primer actualitza la llista de repositoris i
 
 `sudo apt install libpam-tmpdir`
 
-![imagen](img/Imatge enganxada (172).png)
+![imagen](<img/Imatge enganxada (172).png>)
 
 El paquet `libpam-tmpdir` modifica el comportament dels directoris temporals (/tmp i /var/tmp) per usuari, fent que cada sessió utilitzi un directori temporal propi i aïllat.
 
 
 `sudo apt install gcc`
 
-![imagen](img/Imatge enganxada (171).png)
+![imagen](<img/Imatge enganxada (171).png>)
 
 Gcc és especialment útil en entorns de desenvolupament i en sistemes on es necessita compilar codi personalitzat o ajustar aplicacions al sistema concret.
 
 `sudo apt install clamav clamav-daemon`
 
-![imagen](img/Imatge enganxada (173).png)
+![imagen](<img/Imatge enganxada (173).png>)
 
 ClamAV és un antivirus de codi lliure dissenyat per detectar programari maliciós en sistemes Linux. El component freshclam s'encarrega de mantenir actualitzades les bases de dades de definicions de virus per garantir una detecció efectiva.
 
